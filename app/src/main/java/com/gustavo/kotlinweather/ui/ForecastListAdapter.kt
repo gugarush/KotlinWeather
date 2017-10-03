@@ -1,4 +1,4 @@
-package com.gustavo.kotlinweather.persistence.ui
+package com.gustavo.kotlinweather.ui
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
