@@ -11,9 +11,7 @@ import com.gustavo.kotlinweather.domain.model.Forecast
 import com.gustavo.kotlinweather.domain.model.ForecastList
 import com.gustavo.kotlinweather.ui.utils.ctx
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.item_forecast.*
 import org.jetbrains.anko.find
-import org.w3c.dom.Text
 
 /**
  * Created by gugarush on 03/10/2017.
@@ -46,7 +44,6 @@ class ForecastListAdapter(val weakForecast: ForecastList, val itemClick: Forecas
                 minTemperatureView.text = "$low"
                 maxTemperatureView.text = "$high"
                 itemView.setOnClickListener { itemClick(this) }
-
 
             }
         }
