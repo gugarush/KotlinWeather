@@ -36,16 +36,14 @@ class ForecastListAdapter(val weakForecast: ForecastList, val itemClick: Forecas
         private val maxTemperatureView = view.find<TextView>(R.id.maxTemperature)
         private val minTemperatureView = view.find<TextView>(R.id.minTemperature)
 
-        fun bindForecast(forecast: Forecast) {
-            with(forecast) {
-                Picasso.with(itemView.ctx).load(iconUrl).into(iconView)
-                dateView.text = date
-                descriptionView.text = description
-                minTemperatureView.text = "$low"
-                maxTemperatureView.text = "$high"
-                itemView.setOnClickListener { itemClick(this) }
+        fun bindForecast(forecast: Forecast) = with(forecast) {
+            Picasso.with(itemView.ctx).load(iconUrl).into(iconView)
+            dateView.text = date
+            descriptionView.text = description
+            minTemperatureView.text = "$low"
+            maxTemperatureView.text = "$high"
+            itemView.setOnClickListener { itemClick(this) }
 
-            }
         }
     }
 
